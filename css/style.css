@@ -1,56 +1,41 @@
-:root {
-  --bg-dark: #0e0f13;
-  --bg-light: #16181d;
-  --primary: #4f46e5;
-  --accent: #22c55e;
-  --text-main: #e5e7eb;
-  --text-muted: #9ca3af;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Inter", sans-serif;
-}
-
 body {
-  background: var(--bg-dark);
-  color: var(--text-main);
-  min-height: 100vh;
-}
-
-a {
-  color: var(--primary);
-  text-decoration: none;
-}
-
-input, select, button {
-  background: var(--bg-light);
-  color: var(--text-main);
-  border: 1px solid #2a2d36;
-  padding: 12px;
-  border-radius: 8px;
-}
-
-button {
-  background: var(--primary);
-  cursor: pointer;
-  font-weight: 500;
-}
-
-button:hover {
-  opacity: 0.9;
+    background: #0f172a;
+    font-family: Arial, sans-serif;
+    color: #e5e7eb;
 }
 
 .container {
-  max-width: 420px;
-  margin: auto;
-  padding: 40px 20px;
+    width: 350px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #020617;
+    border-radius: 8px;
 }
 
-.card {
-  background: var(--bg-light);
-  padding: 30px;
-  border-radius: 12px;
+h1, h2 {
+    text-align: center;
+}
+
+input, select, button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 8px;
+    background: #020617;
+    color: #e5e7eb;
+    border: 1px solid #334155;
+    border-radius: 5px;
+}
+
+button {
+    background: #2563eb;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
 }

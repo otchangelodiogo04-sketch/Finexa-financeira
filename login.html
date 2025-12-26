@@ -3,27 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <title>Finexa | Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="js/auth.js" defer></script>
+
   <link rel="icon" href="assets/logo.png">
-  <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
 
-<div class="container">
-  <div class="card">
-    <h2>Entrar no Finexa</h2><br>
+<body class="bg-[#0e0f13] flex items-center justify-center min-h-screen text-gray-200">
 
-    <form onsubmit="loginUser(event)">
-      <input id="email" type="email" placeholder="Email"><br><br>
-      <input id="senha" type="password" placeholder="Senha"><br><br>
+<div class="bg-[#16181d] p-8 rounded-xl w-full max-w-md">
 
-      <button type="submit">Entrar</button>
-    </form>
-
-    <br>
-    <p>Não tem conta? <a href="register.html">Criar conta</a></p>
+  <div class="text-center mb-6">
+    <img src="assets/logo.png" class="w-12 mx-auto mb-2">
+    <h1 class="text-2xl font-bold">Entrar no Finexa</h1>
   </div>
-</div>
 
-<script src="js/auth.js"></script>
+  <form onsubmit="login(event)" class="space-y-4">
+
+    <input id="email" type="email" required
+           placeholder="Email"
+           class="w-full px-4 py-3 rounded bg-[#0e0f13]">
+
+    <input id="senha" type="password" required
+           placeholder="Senha"
+           class="w-full px-4 py-3 rounded bg-[#0e0f13]">
+
+    <button type="submit"
+            class="w-full bg-indigo-600 hover:bg-indigo-500 py-3 rounded font-medium">
+      Entrar
+    </button>
+
+  </form>
+
+  <p class="text-center text-sm text-gray-400 mt-6">
+    Ainda não tem conta?
+    <a href="register.html" class="text-indigo-400">Criar conta</a>
+  </p>
+
+</div>
 </body>
 </html>
