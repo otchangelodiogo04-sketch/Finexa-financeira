@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Finexa | Registro</title>
+  <link rel="icon" href="assets/logo.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container">
+  <div class="card">
+    <h2>Criar Conta</h2><br>
+
+    <form onsubmit="registerUser(event)">
+      <input id="nome" type="text" placeholder="Nome completo"><br><br>
+
+      <select id="perfil">
+        <option value="">Perfil</option>
+        <option value="estudante">Estudante</option>
+        <option value="empreendedor">Empreendedor</option>
+      </select><br><br>
+
+      <input id="email" type="email" placeholder="Email"><br><br>
+      <input id="senha" type="password" placeholder="Senha"><br><br>
+
+      <button type="submit">Registrar</button>
+    </form>
+  </div>
+</div>
+
+<script src="js/auth.js"></script>
+</body>
+</html>
