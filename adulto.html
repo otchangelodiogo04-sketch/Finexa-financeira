@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Finexa | Adultos</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="dashboard-body">
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+  <img src="assets/logo.png" alt="Finexa">
+
+  <nav>
+    <a>Início</a>
+    <a>Educação Financeira</a>
+    <a onclick="logout()" style="cursor:pointer;">Sair</a>
+  </nav>
+</aside>
+
+<!-- CONTEÚDO -->
+<main class="content">
+
+  <div class="topbar">
+    <h1>Educação Financeira para Adultos</h1>
+    <p>Aprenda a controlar, planejar e melhorar sua vida financeira</p>
+  </div>
+
+  <section class="cards">
+
+    <div class="card">
+      <h3>Fundamentos do Dinheiro</h3>
+      <p>O básico que todos precisam saber</p>
+      <button onclick="mostrar('fundamentos')">Abrir</button>
+    </div>
+
+    <div class="card">
+      <h3>Controle de Gastos</h3>
+      <p>Como organizar entradas e saídas</p>
+      <button onclick="mostrar('gastos')">Abrir</button>
+    </div>
+
+    <div class="card">
+      <h3>Planejamento Financeiro</h3>
+      <p>Organize o presente e o futuro</p>
+      <button onclick="mostrar('planejamento')">Abrir</button>
+    </div>
+
+    <div class="card">
+      <h3>Dívidas e Crédito</h3>
+      <p>Evite armadilhas financeiras</p>
+      <button onclick="mostrar('dividas')">Abrir</button>
+    </div>
+
+  </section>
+
+  <section id="aula" class="aula-box" style="display:none;"></section>
+
+</main>
+
+<script src="js/auth.js"></script>
+<script>
+function mostrar(tipo) {
+  const box = document.getElementById("aula");
+  box.style.display = "block";
+
+  if (tipo === "fundamentos") {
+    box.innerHTML = `
+      <h2>Fundamentos do Dinheiro</h2>
+      <p>Dinheiro é uma ferramenta para facilitar trocas e organizar a economia.</p>
+      <p>Educação financeira permite tomar decisões conscientes, evitando dívidas e desperdícios.</p>
+    `;
+  }
+
+  if (tipo === "gastos") {
+    box.innerHTML = `
+      <h2>Controle de Gastos</h2>
+      <p>Registre tudo o que ganha e gasta.</p>
+      <ul>
+        <li>Gastos fixos</li>
+        <li>Gastos variáveis</li>
+        <li>Gastos desnecessários</li>
+      </ul>
+    `;
+  }
+
+  if (tipo === "planejamento") {
+    box.innerHTML = `
+      <h2>Planejamento Financeiro</h2>
+      <p>Planejar é decidir como o dinheiro será usado.</p>
+      <p>Defina metas claras e acompanhe mensalmente.</p>
+    `;
+  }
+
+  if (tipo === "dividas") {
+    box.innerHTML = `
+      <h2>Dívidas e Crédito</h2>
+      <p>Crédito deve ser usado com cuidado.</p>
+      <p>Evite juros altos e compromissos além da sua renda.</p>
+    `;
+  }
+
+  window.scrollTo({ top: box.offsetTop, behavior: 'smooth' });
+}
+</script>
+
+</body>
+</html>

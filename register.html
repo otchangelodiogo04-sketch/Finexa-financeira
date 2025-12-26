@@ -2,58 +2,31 @@
 <html lang="pt">
 <head>
   <meta charset="UTF-8">
-  <title>Finexa | Registro</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="js/auth.js" defer></script>
-
-  <link rel="icon" href="assets/logo.png">
+  <title>Cadastro | Finexa</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
+<body class="auth-body">
 
-<body class="bg-[#0e0f13] flex items-center justify-center min-h-screen text-gray-200">
+<div class="auth-box">
+  <img src="assets/logo.png">
+  <h2>Criar Conta</h2>
 
-<div class="bg-[#16181d] p-8 rounded-xl w-full max-w-md">
+  <form onsubmit="registerUser(event)">
+    <input id="nome" placeholder="Nome completo" required>
+    <input type="email" id="email" placeholder="Email" required>
+    <input type="password" id="senha" placeholder="Senha" required>
 
-  <div class="text-center mb-6">
-    <img src="assets/logo.png" class="w-12 mx-auto mb-2">
-    <h1 class="text-2xl font-bold">Criar conta no Finexa</h1>
-  </div>
-
-  <form onsubmit="registrar(event)" class="space-y-4">
-
-    <input id="nome" type="text" required
-           placeholder="Nome completo"
-           class="w-full px-4 py-3 rounded bg-[#0e0f13]">
-
-    <input id="email" type="email" required
-           placeholder="Email"
-           class="w-full px-4 py-3 rounded bg-[#0e0f13]">
-
-    <input id="senha" type="password" required
-           placeholder="Senha"
-           class="w-full px-4 py-3 rounded bg-[#0e0f13]">
-
-    <select id="perfil" required
-            class="w-full px-4 py-3 rounded bg-[#0e0f13] text-gray-200">
-      <option value="">Perfil educacional</option>
+    <select id="perfil" required>
+      <option value="">Perfil</option>
       <option value="crianca">Criança</option>
       <option value="adulto">Adulto</option>
-      <option value="pai">Pai / Responsável</option>
+      <option value="pais">Pais</option>
     </select>
 
-    <button type="submit"
-            class="w-full bg-indigo-600 hover:bg-indigo-500 py-3 rounded font-medium">
-      Criar conta
-    </button>
-
+    <button>Cadastrar</button>
   </form>
-
-  <p class="text-center text-sm text-gray-400 mt-6">
-    Já tem conta?
-    <a href="login.html" class="text-indigo-400">Entrar</a>
-  </p>
-
 </div>
+
+<script src="js/auth.js"></script>
 </body>
 </html>

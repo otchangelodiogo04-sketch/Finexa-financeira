@@ -1,53 +1,39 @@
-// auth.js
+function registerUser(e) {
+  e.preventDefault();
 
-function registrar(event) {
-  event.preventDefault();
-
-  const nome = document.getElementById("nome").value;
-  const email = document.getElementById("email").value;
-  const senha = document.getElementById("senha").value;
-  const perfil = document.getElementById("perfil").value;
-
-  const usuario = {
-    nome,
-    email,
-    senha,
-    perfil
+  const user = {
+    nome: document.getElementById("nome").value,
+    email: document.getElementById("email").value,
+    senha: document.getElementById("senha").value,
+    perfil: document.getElementById("perfil").value
   };
 
-  localStorage.setItem("finexaUser", JSON.stringify(usuario));
-
-  window.location.href = "estudante.html";
+  localStorage.setItem("finexaUser", JSON.stringify(user));
+  redirectPerfil(user.perfil);
 }
 
-function login(event) {
-  event.preventDefault();
+function loginUser(e) {
+  e.preventDefault();
 
   const email = document.getElementById("email").value;
   const senha = document.getElementById("senha").value;
+  const user = JSON.parse(localStorage.getItem("finexaUser"));
 
-  const usuario = JSON.parse(localStorage.getItem("finexaUser"));
-
-  if (!usuario) {
-    alert("Nenhum usuário cadastrado.");
+  if (!user || user.email !== email || user.senha !== senha) {
+    alert("Dados inválidos");
     return;
   }
 
-  if (email === usuario.email && senha === usuario.senha) {
-    window.location.href = "estudante.html";
-  } else {
-    alert("Email ou senha incorretos.");
-  }
+  redirectPerfil(user.perfil);
 }
 
-function protegerPagina() {
-  const usuario = localStorage.getItem("finexaUser");
-  if (!usuario) {
-    window.location.href = "login.html";
-  }
+function redirectPerfil(perfil) {
+  if (perfil === "crianca") location.href = "crianca.html";
+  if (perfil === "adulto") location.href = "adulto.html";
+  if (perfil === "pais") location.href = "pais.html";
 }
 
-function sair() {
+function logout() {
   localStorage.removeItem("finexaUser");
-  window.location.href = "login.html";
+  location.href = "login.html";
 }

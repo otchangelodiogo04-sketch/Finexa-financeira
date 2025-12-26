@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Finexa Kids</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dashboard-body">
+
+<aside class="sidebar">
+  <img src="assets/logo.png">
+  <nav>
+    <a>Início</a>
+    <a>Aprender</a>
+    <a onclick="logout()">Sair</a>
+  </nav>
+</aside>
+
+<main class="content">
+  <div class="topbar">
+    <h1>Finexa Kids 👧</h1>
+  </div>
+
+  <div class="cards">
+    <div class="card">
+      <h3>O que é dinheiro?</h3>
+      <button onclick="mostrar('dinheiro')">Abrir</button>
+    </div>
+  </div>
+
+  <div id="aula" class="aula-box" style="display:none;"></div>
+</main>
+
+<script src="js/auth.js"></script>
+<script>
+function mostrar(t){
+  const a=document.getElementById("aula");
+  a.style.display="block";
+  a.innerHTML="<p>Dinheiro serve para trocar por coisas importantes.</p>";
+}
+</script>
+</body>
+</html>

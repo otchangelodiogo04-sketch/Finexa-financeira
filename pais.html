@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Finexa | Pais</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="dashboard-body">
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+  <img src="assets/logo.png" alt="Finexa">
+
+  <nav>
+    <a>Início</a>
+    <a>Educação em Família</a>
+    <a onclick="logout()" style="cursor:pointer;">Sair</a>
+  </nav>
+</aside>
+
+<!-- CONTEÚDO -->
+<main class="content">
+
+  <div class="topbar">
+    <h1>Educação Financeira para Pais</h1>
+    <p>Ensinar dinheiro em família cria adultos conscientes</p>
+  </div>
+
+  <section class="cards">
+
+    <div class="card">
+      <h3>Falar sobre Dinheiro</h3>
+      <p>Como conversar com os filhos</p>
+      <button onclick="mostrar('conversa')">Abrir</button>
+    </div>
+
+    <div class="card">
+      <h3>Mesada Educativa</h3>
+      <p>Ensinar responsabilidade</p>
+      <button onclick="mostrar('mesada')">Abrir</button>
+    </div>
+
+    <div class="card">
+      <h3>Limites Financeiros</h3>
+      <p>Aprender a dizer não</p>
+      <button onclick="mostrar('limites')">Abrir</button>
+    </div>
+
+    <div class="card">
+      <h3>Exemplo dos Pais</h3>
+      <p>As crianças aprendem observando</p>
+      <button onclick="mostrar('exemplo')">Abrir</button>
+    </div>
+
+  </section>
+
+  <section id="aula" class="aula-box" style="display:none;"></section>
+
+</main>
+
+<script src="js/auth.js"></script>
+<script>
+function mostrar(tipo) {
+  const box = document.getElementById("aula");
+  box.style.display = "block";
+
+  if (tipo === "conversa") {
+    box.innerHTML = `
+      <h2>Falar sobre dinheiro</h2>
+      <p>Dinheiro não deve ser tabu.</p>
+      <p>Explique de forma simples e adequada à idade.</p>
+    `;
+  }
+
+  if (tipo === "mesada") {
+    box.innerHTML = `
+      <h2>Mesada Educativa</h2>
+      <p>A mesada ensina planejamento e escolhas.</p>
+      <p>Evite cobrir erros sempre.</p>
+    `;
+  }
+
+  if (tipo === "limites") {
+    box.innerHTML = `
+      <h2>Limites Financeiros</h2>
+      <p>Ensinar limites ajuda na vida adulta.</p>
+      <p>Dizer não também é educar.</p>
+    `;
+  }
+
+  if (tipo === "exemplo") {
+    box.innerHTML = `
+      <h2>O Exemplo dos Pais</h2>
+      <p>Crianças aprendem observando comportamentos.</p>
+      <p>Seja o exemplo que deseja ver.</p>
+    `;
+  }
+
+  window.scrollTo({ top: box.offsetTop, behavior: 'smooth' });
+}
+</script>
+
+</body>
+</html>

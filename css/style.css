@@ -1,41 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
 body {
-    background: #0f172a;
-    font-family: Arial, sans-serif;
-    color: #e5e7eb;
+  background: #0e1117;
+  color: #e6edf3;
 }
 
-.container {
-    width: 350px;
-    margin: 50px auto;
-    padding: 20px;
-    background: #020617;
-    border-radius: 8px;
+/* ---------- LOGIN / REGISTER ---------- */
+.auth-body {
+  min-height: 100vh;
+  background: url("../assets/wallpaper.jpg") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-h1, h2 {
-    text-align: center;
+.auth-box {
+  width: 360px;
+  background: rgba(14,17,23,0.95);
+  padding: 30px;
+  border-radius: 10px;
 }
 
-input, select, button {
-    width: 100%;
-    margin-top: 10px;
-    padding: 8px;
-    background: #020617;
-    color: #e5e7eb;
-    border: 1px solid #334155;
-    border-radius: 5px;
+.auth-box img {
+  width: 60px;
+  display: block;
+  margin: 0 auto 10px;
 }
 
-button {
-    background: #2563eb;
-    cursor: pointer;
+.auth-box h2 {
+  text-align: center;
+  margin-bottom: 15px;
 }
 
-button:hover {
-    background: #1d4ed8;
+.auth-box input,
+.auth-box select,
+.auth-box button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 6px;
+  border: none;
 }
 
-ul {
-    list-style: none;
-    padding: 0;
+.auth-box input,
+.auth-box select {
+  background: #161b22;
+  color: #fff;
+}
+
+.auth-box button {
+  background: #4fc3f7;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* ---------- DASHBOARD ---------- */
+.dashboard-body {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 220px;
+  background: #0b0e14;
+  padding: 20px;
+}
+
+.sidebar img {
+  width: 40px;
+}
+
+.sidebar nav a {
+  display: block;
+  margin: 15px 0;
+  color: #9da5b4;
+  text-decoration: none;
+}
+
+.sidebar nav a:hover {
+  color: #4fc3f7;
+}
+
+.content {
+  flex: 1;
+  padding: 30px;
+}
+
+.topbar {
+  margin-bottom: 20px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #161b22;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.card button {
+  margin-top: 10px;
+  padding: 8px;
+  background: #4fc3f7;
+  border: none;
+  cursor: pointer;
+}
+
+.aula-box {
+  margin-top: 30px;
+  background: #161b22;
+  padding: 20px;
+  border-radius: 10px;
 }
