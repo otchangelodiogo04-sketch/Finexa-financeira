@@ -2,62 +2,83 @@
 <html lang="pt">
 <head>
   <meta charset="UTF-8">
-  <title>Finexa | Criança</title>
+  <title>Finexa | Crianças</title>
 
-  <link rel="icon" href="assets/logo.png">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
-<body class="dashboard-body">
+<body class="dashboard">
 
-  <main class="content">
-    <h1>Educação Financeira para Crianças</h1>
-    <p>Aprender a cuidar do dinheiro de forma simples e divertida.</p>
+<!-- SIDEBAR -->
+<aside class="sidebar">
+  <div class="logo-box">
+    <img src="assets/logo.png">
+    <span class="logo-text">Finexa</span>
+  </div>
 
-    <section class="cards">
+  <nav>
+    <a class="active"><i class="fa-solid fa-house"></i></a>
+    <a href="trofeu.html"><i class="fa-solid fa-trophy"></i></a>
+  </nav>
+</aside>
 
-      <div class="card" data-module="dinheiro">
-        <h3>O que é dinheiro?</h3>
-        <p>Descubra para que serve o dinheiro.</p>
+<!-- MAIN -->
+<main class="main">
 
-        <div class="progress">
-          <span></span>
-        </div>
+<header class="header">
+  <h1>Aprender Brincando</h1>
+  <p>Módulos educativos de educação financeira</p>
+</header>
+<section class="cards">
 
-        <button onclick="concluirModulo('dinheiro')">
-          Concluir
-        </button>
-      </div>
+<div class="card" onclick="startGame(1)">
+  <i class="fa-solid fa-star"></i>
+  <h3>Módulo 1</h3>
+  <p>Nível Inicial</p>
 
-      <div class="card" data-module="poupanca">
-        <h3>Poupança</h3>
-        <p>Aprenda a guardar dinheiro.</p>
+  <div class="progress-bar">
+    <div class="progress-fill" id="progress-mod1"></div>
+  </div>
+</div>
 
-        <div class="progress">
-          <span></span>
-        </div>
 
-        <button onclick="concluirModulo('poupanca')">
-          Concluir
-        </button>
-      </div>
+<div class="card" id="mod2">
+  <i class="fa-solid fa-lock"></i>
+  <h3>Módulo 2</h3>
+  <p>Nível Intermédio</p>
+</div>
 
-      <div class="card" data-module="escolhas">
-        <h3>Boas escolhas</h3>
-        <p>Entenda como decidir melhor.</p>
+<div class="card" id="mod3">
+  <i class="fa-solid fa-lock"></i>
+  <h3>Módulo 3</h3>
+  <p>Nível Avançado</p>
+</div>
 
-        <div class="progress">
-          <span></span>
-        </div>
+</section>
+</main>
 
-        <button onclick="concluirModulo('escolhas')">
-          Concluir
-        </button>
-      </div>
+<script>
+function startGame(module) {
+  window.location.href = `modulo-crianca.html?modulo=${module}`;
+}
 
-    </section>
-  </main>
+window.onload = () => {
+  for (let i = 1; i <= 3; i++) {
+    const card = document.getElementById(`mod${i}`);
+    if (!card) continue;
 
-  <script src="js/main.js"></script>
+    if (i === 1 || localStorage.getItem(`modulo${i-1}`) === "concluido") {
+      card.classList.remove("locked");
+      card.onclick = () => startGame(i);
+      card.querySelector("i").className = "fa-solid fa-star";
+    }
+  }
+};
+</script>
+
+</script>
+
 </body>
 </html>

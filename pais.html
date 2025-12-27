@@ -2,105 +2,110 @@
 <html lang="pt">
 <head>
   <meta charset="UTF-8">
-  <title>Finexa | Educação Financeira para Pais</title>
+  <title>Finexa | Pais</title>
+
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
-<body class="dashboard-body">
+<body class="dashboard">
 
+<!-- MENU -->
 <aside class="sidebar">
-  <img src="assets/logo.png" alt="Finexa">
+  <div class="logo-box">
+    <img src="assets/logo.png">
+    <span class="logo-text finexa">Finexa</span>
+  </div>
+
   <nav>
-    <a><i class="fa-solid fa-house"></i> Início</a>
-    <a><i class="fa-solid fa-people-roof"></i> Família</a>
-    <a onclick="logout()" style="cursor:pointer;">
-      <i class="fa-solid fa-right-from-bracket"></i> Sair
+    <a href="pais.html" class="active">
+      <i class="fa-solid fa-house"></i>
+    </a>
+    <a href="login.html">
+      <i class="fa-solid fa-right-from-bracket"></i>
     </a>
   </nav>
 </aside>
 
-<main class="content">
+<!-- CONTEÚDO -->
+<main class="main">
 
-  <div class="topbar">
-    <h1>Educação Financeira para Pais</h1>
-    <p>Formação financeira no ambiente familiar</p>
-  </div>
+<header class="header">
+  <h1>Educação Financeira para Pais</h1>
+  <p>Ensine pelo exemplo e prepare seus filhos para o futuro</p>
+</header>
 
-  <section class="cards">
+<section class="cards">
 
-    <div class="card">
-      <h3><i class="fa-solid fa-comments-dollar"></i> Conversar sobre dinheiro</h3>
-      <button onclick="mostrar('conversa')">Abrir conteúdo</button>
-    </div>
+<!-- CARD 1 -->
+<div class="card"
+ onclick="location.href='conteudo.html?id=pais_1'">
+  <i class="fa-solid fa-people-roof"></i>
+  <h3>Papel dos Pais</h3>
+  <p>
+    Entenda como o comportamento financeiro dos pais
+    influencia diretamente os filhos.
+  </p>
+</div>
 
-    <div class="card">
-      <h3><i class="fa-solid fa-hand-holding-dollar"></i> Mesada Educativa</h3>
-      <button onclick="mostrar('mesada')">Abrir conteúdo</button>
-    </div>
+<!-- CARD 2 -->
+<div class="card"
+ onclick="location.href='conteudo.html?id=pais_2'">
+  <i class="fa-solid fa-child"></i>
+  <h3>Ensinar Crianças a Poupar</h3>
+  <p>
+    Métodos simples e eficazes
+    para ensinar crianças a lidar com dinheiro.
+  </p>
+</div>
 
-    <div class="card">
-      <h3><i class="fa-solid fa-scale-balanced"></i> Limites Financeiros</h3>
-      <button onclick="mostrar('limites')">Abrir conteúdo</button>
-    </div>
+<!-- CARD 3 -->
+<div class="card"
+ onclick="location.href='conteudo.html?id=pais_3'">
+  <i class="fa-solid fa-coins"></i>
+  <h3>Mesada Consciente</h3>
+  <p>
+    Quando usar mesada, como usar
+    e como transformar em aprendizado real.
+  </p>
+</div>
 
-    <div class="card">
-      <h3><i class="fa-solid fa-user-check"></i> Exemplo dos Pais</h3>
-      <button onclick="mostrar('exemplo')">Abrir conteúdo</button>
-    </div>
+<!-- CARD 4 -->
+<div class="card"
+ onclick="location.href='conteudo.html?id=pais_4'">
+  <i class="fa-solid fa-comments"></i>
+  <h3>Diálogo Financeiro</h3>
+  <p>
+    Como falar sobre dinheiro em família
+    sem medo ou tabus.
+  </p>
+</div>
 
-  </section>
+<!-- CARD 5 -->
+<div class="card"
+ onclick="location.href='conteudo.html?id=pais_5'">
+  <i class="fa-solid fa-calendar-check"></i>
+  <h3>Planejamento Familiar</h3>
+  <p>
+    Organização financeira da família
+    para segurança e tranquilidade.
+  </p>
+</div>
 
-  <section id="aula" class="aula-box" style="display:none;"></section>
+<!-- CARD 6 -->
+<div class="card"
+ onclick="location.href='conteudo.html?id=pais_6'">
+  <i class="fa-solid fa-graduation-cap"></i>
+  <h3>Preparar para o Futuro</h3>
+  <p>
+    Como preparar os filhos financeiramente
+    para a vida adulta.
+  </p>
+</div>
 
+</section>
 </main>
-
-<script src="js/auth.js"></script>
-<script>
-function mostrar(tipo) {
-  const box = document.getElementById("aula");
-  box.style.display = "block";
-
-  if (tipo === "conversa") {
-    box.innerHTML = `
-      <h2>Conversar sobre dinheiro em família</h2>
-      <p>Educação financeira começa com diálogo.</p>
-      <p>Os pais devem explicar que dinheiro é resultado de esforço e planejamento.</p>
-    `;
-  }
-
-  if (tipo === "mesada") {
-    box.innerHTML = `
-      <h2>Mesada como ferramenta educativa</h2>
-      <p>A mesada ensina gestão de recursos.</p>
-      <ul>
-        <li>Valor fixo</li>
-        <li>Periodicidade clara</li>
-        <li>Sem resgates constantes</li>
-      </ul>
-    `;
-  }
-
-  if (tipo === "limites") {
-    box.innerHTML = `
-      <h2>Limites Financeiros</h2>
-      <p>Limites ajudam na formação do caráter financeiro.</p>
-      <p>Nem todo desejo deve ser atendido imediatamente.</p>
-    `;
-  }
-
-  if (tipo === "exemplo") {
-    box.innerHTML = `
-      <h2>O exemplo dos pais</h2>
-      <p>Comportamentos financeiros são aprendidos por observação.</p>
-      <p>Pais organizados formam adultos conscientes.</p>
-    `;
-  }
-
-  window.scrollTo({ top: box.offsetTop, behavior: 'smooth' });
-}
-</script>
 
 </body>
 </html>

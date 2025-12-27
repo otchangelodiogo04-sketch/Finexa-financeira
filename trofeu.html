@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Finexa | Troféus</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="dashboard">
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+  <div class="logo-box">
+    <img src="assets/logo.png">
+    <span class="logo-text">Finexa</span>
+  </div>
+
+  <nav>
+    <a href="crianca.html"><i class="fa-solid fa-house"></i></a>
+    <a class="active"><i class="fa-solid fa-trophy"></i></a>
+  </nav>
+</aside>
+
+<!-- MAIN -->
+<main class="main">
+
+<header class="header">
+  <h1>Meus Troféus & Progresso</h1>
+  <p>Acompanhe sua evolução no Finexa ⭐</p>
+</header>
+
+<!-- PROGRESSO -->
+<section class="cards">
+
+<div class="card">
+  <i class="fa-solid fa-chart-line"></i>
+  <h3>Progresso Geral</h3>
+
+  <div class="progress-bar">
+    <div class="progress-fill" id="progress-geral"></div>
+  </div>
+
+  <p id="progress-text"></p>
+</div>
+
+<div class="card">
+  <i class="fa-solid fa-star"></i>
+  <h3>Pontos Totais</h3>
+  <p id="total-pontos">0 pontos</p>
+</div>
+
+</section>
+
+<!-- TROFÉUS -->
+<section class="cards">
+
+<div class="card" id="trofeu1">
+  <i class="fa-solid fa-medal"></i>
+  <h3>Módulo 1</h3>
+  <p>Completar o nível inicial</p>
+</div>
+
+<div class="card" id="trofeu2">
+  <i class="fa-solid fa-medal"></i>
+  <h3>Módulo 2</h3>
+  <p>Completar o nível intermédio</p>
+</div>
+
+<div class="card" id="trofeu3">
+  <i class="fa-solid fa-medal"></i>
+  <h3>Módulo 3</h3>
+  <p>Completar o nível avançado</p>
+</div>
+
+</section>
+
+</main>
+
+<script src="js/trofeu.js"></script>
+</body>
+</html>

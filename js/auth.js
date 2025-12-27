@@ -1,39 +1,70 @@
-function registerUser(e) {
+/* =========================
+   REGISTRO
+   ========================= */
+document.getElementById("registerForm")?.addEventListener("submit", function (e) {
   e.preventDefault();
 
-  const user = {
-    nome: document.getElementById("nome").value,
-    email: document.getElementById("email").value,
-    senha: document.getElementById("senha").value,
-    perfil: document.getElementById("perfil").value
-  };
+  const full_name = document.getElementById("full_name").value;
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+  const profile = document.getElementById("profile").value;
 
-  localStorage.setItem("finexaUser", JSON.stringify(user));
-  redirectPerfil(user.perfil);
-}
+  fetch("http://127.0.0.1:5000/register", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ full_name, email, password, profile })
+  })
+    .then(res => res.json())
+    .then(data => {
+      if (data.error) {
+        alert(data.error);
+        return;
+      }
 
-function loginUser(e) {
+      localStorage.setItem("user_email", email);
+      localStorage.setItem("user_profile", profile);
+
+      redirectProfile(profile);
+    })
+    .catch(() => alert("Erro ao conectar com o servidor"));
+});
+
+
+/* =========================
+   LOGIN
+   ========================= */
+document.getElementById("loginForm")?.addEventListener("submit", function (e) {
   e.preventDefault();
 
   const email = document.getElementById("email").value;
-  const senha = document.getElementById("senha").value;
-  const user = JSON.parse(localStorage.getItem("finexaUser"));
+  const password = document.getElementById("password").value;
 
-  if (!user || user.email !== email || user.senha !== senha) {
-    alert("Dados inválidos");
-    return;
-  }
+  fetch("http://127.0.0.1:5000/login", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ email, password })
+  })
+    .then(res => res.json())
+    .then(data => {
+      if (data.error) {
+        alert("Email ou senha inválidos");
+        return;
+      }
 
-  redirectPerfil(user.perfil);
-}
+      localStorage.setItem("user_email", email);
+      localStorage.setItem("user_profile", data.profile);
 
-function redirectPerfil(perfil) {
-  if (perfil === "crianca") location.href = "crianca.html";
-  if (perfil === "adulto") location.href = "adulto.html";
-  if (perfil === "pais") location.href = "pais.html";
-}
+      redirectProfile(data.profile);
+    })
+    .catch(() => alert("Erro ao conectar com o servidor"));
+});
 
-function logout() {
-  localStorage.removeItem("finexaUser");
-  location.href = "login.html";
+
+/* =========================
+   REDIRECT
+   ========================= */
+function redirectProfile(profile) {
+  if (profile === "crianca") window.location.href = "crianca.html";
+  if (profile === "adulto") window.location.href = "adulto.html";
+  if (profile === "pais") window.location.href = "pais.html";
 }

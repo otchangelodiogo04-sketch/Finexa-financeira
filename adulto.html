@@ -2,125 +2,110 @@
 <html lang="pt">
 <head>
   <meta charset="UTF-8">
-  <title>Finexa | Educação Financeira para Adultos</title>
+  <title>Finexa | Adultos</title>
+
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
-<body class="dashboard-body">
+<body class="dashboard">
 
+<!-- MENU LATERAL -->
 <aside class="sidebar">
-  <img src="assets/logo.png" alt="Finexa">
+  <div class="logo-box">
+    <img src="assets/logo.png">
+    <span class="logo-text finexa">Finexa</span>
+  </div>
+
   <nav>
-    <a><i class="fa-solid fa-house"></i> Início</a>
-    <a><i class="fa-solid fa-book"></i> Conteúdos</a>
-    <a onclick="logout()" style="cursor:pointer;">
-      <i class="fa-solid fa-right-from-bracket"></i> Sair
+    <a href="adulto.html" class="active">
+      <i class="fa-solid fa-house"></i>
+    </a>
+    <a href="login.html">
+      <i class="fa-solid fa-right-from-bracket"></i>
     </a>
   </nav>
 </aside>
 
-<main class="content">
+<!-- CONTEÚDO -->
+<main class="main">
 
-  <div class="topbar">
-    <h1>Educação Financeira para Adultos</h1>
-    <p>Base técnica para controle, planejamento e decisões financeiras conscientes</p>
-  </div>
+<header class="header">
+  <h1>Educação Financeira para Adultos</h1>
+  <p>Construa controle, consciência e segurança financeira</p>
+</header>
 
-  <section class="cards">
+<section class="cards">
 
-    <div class="card">
-      <h3><i class="fa-solid fa-coins"></i> Fundamentos Financeiros</h3>
-      <p>Conceitos essenciais sobre dinheiro</p>
-      <button onclick="mostrar('fundamentos')">Abrir conteúdo</button>
-    </div>
+<!-- CARD 1 -->
+<div class="card"
+ onclick="location.href='conteudo.html?id=adulto_1'">
+  <i class="fa-solid fa-book-open"></i>
+  <h3>Fundamentos Financeiros</h3>
+  <p>
+    Entenda o que é educação financeira, por que ela é essencial
+    e como ela impacta suas decisões diárias.
+  </p>
+</div>
 
-    <div class="card">
-      <h3><i class="fa-solid fa-chart-line"></i> Controle de Gastos</h3>
-      <p>Organização financeira pessoal</p>
-      <button onclick="mostrar('gastos')">Abrir conteúdo</button>
-    </div>
+<!-- CARD 2 -->
+<div class="card"
+ onclick="location.href='conteudo.html?id=adulto_2'">
+  <i class="fa-solid fa-wallet"></i>
+  <h3>Organização de Gastos</h3>
+  <p>
+    Aprenda a identificar gastos invisíveis, controlar despesas
+    e criar hábitos financeiros saudáveis.
+  </p>
+</div>
 
-    <div class="card">
-      <h3><i class="fa-solid fa-compass"></i> Planejamento Financeiro</h3>
-      <p>Metas, prazos e estratégia</p>
-      <button onclick="mostrar('planejamento')">Abrir conteúdo</button>
-    </div>
+<!-- CARD 3 -->
+<div class="card"
+ onclick="location.href='conteudo.html?id=adulto_3'">
+  <i class="fa-solid fa-chart-line"></i>
+  <h3>Planejamento Financeiro</h3>
+  <p>
+    Descubra como planejar curto, médio e longo prazo
+    mesmo com renda limitada.
+  </p>
+</div>
 
-    <div class="card">
-      <h3><i class="fa-solid fa-triangle-exclamation"></i> Dívidas e Crédito</h3>
-      <p>Riscos, juros e decisões responsáveis</p>
-      <button onclick="mostrar('dividas')">Abrir conteúdo</button>
-    </div>
+<!-- CARD 4 -->
+<div class="card"
+ onclick="location.href='conteudo.html?id=adulto_4'">
+  <i class="fa-solid fa-piggy-bank"></i>
+  <h3>Poupança & Emergência</h3>
+  <p>
+    Aprenda a criar uma reserva financeira
+    para imprevistos e segurança pessoal.
+  </p>
+</div>
 
-  </section>
+<!-- CARD 5 -->
+<div class="card"
+ onclick="location.href='conteudo.html?id=adulto_5'">
+  <i class="fa-solid fa-credit-card"></i>
+  <h3>Dívidas & Consumo</h3>
+  <p>
+    Entenda como sair das dívidas,
+    evitar armadilhas financeiras e consumir conscientemente.
+  </p>
+</div>
 
-  <section id="aula" class="aula-box" style="display:none;"></section>
+<!-- CARD 6 -->
+<div class="card"
+ onclick="location.href='conteudo.html?id=adulto_6'">
+  <i class="fa-solid fa-brain"></i>
+  <h3>Mentalidade Financeira</h3>
+  <p>
+    Reprograme sua relação com o dinheiro
+    e desenvolva uma mentalidade saudável.
+  </p>
+</div>
 
+</section>
 </main>
-
-<script src="js/auth.js"></script>
-<script>
-function mostrar(tipo) {
-  const box = document.getElementById("aula");
-  box.style.display = "block";
-
-  if (tipo === "fundamentos") {
-    box.innerHTML = `
-      <h2>Fundamentos Financeiros</h2>
-      <p>Educação financeira é a capacidade de compreender, planejar e controlar o uso do dinheiro.</p>
-      <ul>
-        <li>Diferença entre necessidade e desejo</li>
-        <li>Renda ativa e renda passiva</li>
-        <li>Valor do tempo e do dinheiro</li>
-      </ul>
-      <p>Sem fundamentos, qualquer decisão financeira se torna arriscada.</p>
-    `;
-  }
-
-  if (tipo === "gastos") {
-    box.innerHTML = `
-      <h2>Controle de Gastos</h2>
-      <p>O controle financeiro começa pelo registro.</p>
-      <ul>
-        <li>Gastos fixos (aluguel, contas)</li>
-        <li>Gastos variáveis (alimentação, lazer)</li>
-        <li>Gastos supérfluos</li>
-      </ul>
-      <p>Quem não controla gastos perde previsibilidade financeira.</p>
-    `;
-  }
-
-  if (tipo === "planejamento") {
-    box.innerHTML = `
-      <h2>Planejamento Financeiro</h2>
-      <p>Planejar é antecipar decisões futuras.</p>
-      <ol>
-        <li>Definir objetivos claros</li>
-        <li>Estabelecer prazos</li>
-        <li>Distribuir recursos de forma consciente</li>
-      </ol>
-      <p>Planejamento reduz riscos e aumenta estabilidade.</p>
-    `;
-  }
-
-  if (tipo === "dividas") {
-    box.innerHTML = `
-      <h2>Dívidas e Crédito</h2>
-      <p>Crédito não é extensão da renda.</p>
-      <ul>
-        <li>Entender juros e taxas</li>
-        <li>Evitar endividamento contínuo</li>
-        <li>Priorizar quitação de dívidas caras</li>
-      </ul>
-      <p>Uso incorreto do crédito compromete o futuro financeiro.</p>
-    `;
-  }
-
-  window.scrollTo({ top: box.offsetTop, behavior: 'smooth' });
-}
-</script>
 
 </body>
 </html>

@@ -1,5 +1,9 @@
-document.querySelectorAll('.card button').forEach(btn => {
-  btn.addEventListener('click', () => {
-    alert('Este módulo será aberto em breve 🚀');
-  });
-});
+function openModal(title, content) {
+  document.getElementById("modalTitle").innerHTML = title;
+  document.getElementById("modalBody").innerHTML = content;
+  document.getElementById("contentModal").classList.remove("hidden");
+}
+
+function closeModal() {
+  document.getElementById("contentModal").classList.add("hidden");
+}

@@ -2,29 +2,33 @@
 <html lang="pt">
 <head>
   <meta charset="UTF-8">
-  <title>Cadastro | Finexa</title>
+  <title>Registro | Finexa</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="auth-body">
+
+<body class="auth-page">
 
 <div class="auth-box">
-  <img src="assets/logo.png">
   <h2>Criar Conta</h2>
+<form id="registerForm">
+  <input id="full_name" placeholder="Nome completo" required>
+  <input id="email" type="email" placeholder="Email" required>
+  <input id="password" type="password" placeholder="Senha" required>
 
-  <form onsubmit="registerUser(event)">
-    <input id="nome" placeholder="Nome completo" required>
-    <input type="email" id="email" placeholder="Email" required>
-    <input type="password" id="senha" placeholder="Senha" required>
+  <select id="profile" required>
+    <option value="">Escolha o perfil</option>
+    <option value="crianca">Criança</option>
+    <option value="adulto">Adulto</option>
+    <option value="pais">Pais</option>
+  </select>
 
-    <select id="perfil" required>
-      <option value="">Perfil</option>
-      <option value="crianca">Criança</option>
-      <option value="adulto">Adulto</option>
-      <option value="pais">Pais</option>
-    </select>
+  <button type="submit">Cadastrar</button>
+</form>
 
-    <button>Cadastrar</button>
-  </form>
+  <p>
+    Já tens conta?
+    <a href="login.html">Entrar</a>
+  </p>
 </div>
 
 <script src="js/auth.js"></script>
