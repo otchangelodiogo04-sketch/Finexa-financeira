@@ -2,26 +2,38 @@
 <html lang="pt">
 <head>
   <meta charset="UTF-8">
-  <title>Login | Finexa</title>
+  <title>Finexa · Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="assets/logo.png">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="auth-body">
 
-<div class="auth-box">
-  <img src="assets/logo.png">
-  <h2>Entrar</h2>
+<body class="auth-page">
 
-  <form onsubmit="loginUser(event)">
-    <input type="email" id="email" placeholder="Email" required>
-    <input type="password" id="senha" placeholder="Senha" required>
-    <button>Entrar</button>
-  </form>
+  <div class="auth-overlay">
+    <div class="auth-box">
 
-  <p style="text-align:center;margin-top:10px;">
-    <a href="register.html">Criar conta</a>
-  </p>
-</div>
+      <img src="assets/logo.png" class="logo" alt="Finexa">
 
-<script src="js/auth.js"></script>
+      <h2>Entrar</h2>
+      <p class="auth-subtitle">Continue sua jornada financeira</p>
+
+      <form onsubmit="loginUser(event)">
+        <input type="text" id="login" placeholder="Nome ou email" required>
+
+        <input type="password" id="senhaLogin" placeholder="Senha" required>
+
+        <button type="submit">Entrar</button>
+      </form>
+
+      <p class="auth-footer">
+        Não tens conta?
+        <a href="register.html">Criar agora</a>
+      </p>
+
+    </div>
+  </div>
+
+  <script src="js/auth.js"></script>
 </body>
 </html>

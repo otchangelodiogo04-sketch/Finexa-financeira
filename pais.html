@@ -2,55 +2,52 @@
 <html lang="pt">
 <head>
   <meta charset="UTF-8">
-  <title>Finexa | Pais</title>
+  <title>Finexa | Educação Financeira para Pais</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body class="dashboard-body">
 
-<!-- SIDEBAR -->
 <aside class="sidebar">
   <img src="assets/logo.png" alt="Finexa">
-
   <nav>
-    <a>Início</a>
-    <a>Educação em Família</a>
-    <a onclick="logout()" style="cursor:pointer;">Sair</a>
+    <a><i class="fa-solid fa-house"></i> Início</a>
+    <a><i class="fa-solid fa-people-roof"></i> Família</a>
+    <a onclick="logout()" style="cursor:pointer;">
+      <i class="fa-solid fa-right-from-bracket"></i> Sair
+    </a>
   </nav>
 </aside>
 
-<!-- CONTEÚDO -->
 <main class="content">
 
   <div class="topbar">
     <h1>Educação Financeira para Pais</h1>
-    <p>Ensinar dinheiro em família cria adultos conscientes</p>
+    <p>Formação financeira no ambiente familiar</p>
   </div>
 
   <section class="cards">
 
     <div class="card">
-      <h3>Falar sobre Dinheiro</h3>
-      <p>Como conversar com os filhos</p>
-      <button onclick="mostrar('conversa')">Abrir</button>
+      <h3><i class="fa-solid fa-comments-dollar"></i> Conversar sobre dinheiro</h3>
+      <button onclick="mostrar('conversa')">Abrir conteúdo</button>
     </div>
 
     <div class="card">
-      <h3>Mesada Educativa</h3>
-      <p>Ensinar responsabilidade</p>
-      <button onclick="mostrar('mesada')">Abrir</button>
+      <h3><i class="fa-solid fa-hand-holding-dollar"></i> Mesada Educativa</h3>
+      <button onclick="mostrar('mesada')">Abrir conteúdo</button>
     </div>
 
     <div class="card">
-      <h3>Limites Financeiros</h3>
-      <p>Aprender a dizer não</p>
-      <button onclick="mostrar('limites')">Abrir</button>
+      <h3><i class="fa-solid fa-scale-balanced"></i> Limites Financeiros</h3>
+      <button onclick="mostrar('limites')">Abrir conteúdo</button>
     </div>
 
     <div class="card">
-      <h3>Exemplo dos Pais</h3>
-      <p>As crianças aprendem observando</p>
-      <button onclick="mostrar('exemplo')">Abrir</button>
+      <h3><i class="fa-solid fa-user-check"></i> Exemplo dos Pais</h3>
+      <button onclick="mostrar('exemplo')">Abrir conteúdo</button>
     </div>
 
   </section>
@@ -67,33 +64,37 @@ function mostrar(tipo) {
 
   if (tipo === "conversa") {
     box.innerHTML = `
-      <h2>Falar sobre dinheiro</h2>
-      <p>Dinheiro não deve ser tabu.</p>
-      <p>Explique de forma simples e adequada à idade.</p>
+      <h2>Conversar sobre dinheiro em família</h2>
+      <p>Educação financeira começa com diálogo.</p>
+      <p>Os pais devem explicar que dinheiro é resultado de esforço e planejamento.</p>
     `;
   }
 
   if (tipo === "mesada") {
     box.innerHTML = `
-      <h2>Mesada Educativa</h2>
-      <p>A mesada ensina planejamento e escolhas.</p>
-      <p>Evite cobrir erros sempre.</p>
+      <h2>Mesada como ferramenta educativa</h2>
+      <p>A mesada ensina gestão de recursos.</p>
+      <ul>
+        <li>Valor fixo</li>
+        <li>Periodicidade clara</li>
+        <li>Sem resgates constantes</li>
+      </ul>
     `;
   }
 
   if (tipo === "limites") {
     box.innerHTML = `
       <h2>Limites Financeiros</h2>
-      <p>Ensinar limites ajuda na vida adulta.</p>
-      <p>Dizer não também é educar.</p>
+      <p>Limites ajudam na formação do caráter financeiro.</p>
+      <p>Nem todo desejo deve ser atendido imediatamente.</p>
     `;
   }
 
   if (tipo === "exemplo") {
     box.innerHTML = `
-      <h2>O Exemplo dos Pais</h2>
-      <p>Crianças aprendem observando comportamentos.</p>
-      <p>Seja o exemplo que deseja ver.</p>
+      <h2>O exemplo dos pais</h2>
+      <p>Comportamentos financeiros são aprendidos por observação.</p>
+      <p>Pais organizados formam adultos conscientes.</p>
     `;
   }
 

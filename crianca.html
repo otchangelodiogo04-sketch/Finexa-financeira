@@ -2,42 +2,62 @@
 <html lang="pt">
 <head>
   <meta charset="UTF-8">
-  <title>Finexa Kids</title>
+  <title>Finexa | Criança</title>
+
+  <link rel="icon" href="assets/logo.png">
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body class="dashboard-body">
 
-<aside class="sidebar">
-  <img src="assets/logo.png">
-  <nav>
-    <a>Início</a>
-    <a>Aprender</a>
-    <a onclick="logout()">Sair</a>
-  </nav>
-</aside>
+  <main class="content">
+    <h1>Educação Financeira para Crianças</h1>
+    <p>Aprender a cuidar do dinheiro de forma simples e divertida.</p>
 
-<main class="content">
-  <div class="topbar">
-    <h1>Finexa Kids 👧</h1>
-  </div>
+    <section class="cards">
 
-  <div class="cards">
-    <div class="card">
-      <h3>O que é dinheiro?</h3>
-      <button onclick="mostrar('dinheiro')">Abrir</button>
-    </div>
-  </div>
+      <div class="card" data-module="dinheiro">
+        <h3>O que é dinheiro?</h3>
+        <p>Descubra para que serve o dinheiro.</p>
 
-  <div id="aula" class="aula-box" style="display:none;"></div>
-</main>
+        <div class="progress">
+          <span></span>
+        </div>
 
-<script src="js/auth.js"></script>
-<script>
-function mostrar(t){
-  const a=document.getElementById("aula");
-  a.style.display="block";
-  a.innerHTML="<p>Dinheiro serve para trocar por coisas importantes.</p>";
-}
-</script>
+        <button onclick="concluirModulo('dinheiro')">
+          Concluir
+        </button>
+      </div>
+
+      <div class="card" data-module="poupanca">
+        <h3>Poupança</h3>
+        <p>Aprenda a guardar dinheiro.</p>
+
+        <div class="progress">
+          <span></span>
+        </div>
+
+        <button onclick="concluirModulo('poupanca')">
+          Concluir
+        </button>
+      </div>
+
+      <div class="card" data-module="escolhas">
+        <h3>Boas escolhas</h3>
+        <p>Entenda como decidir melhor.</p>
+
+        <div class="progress">
+          <span></span>
+        </div>
+
+        <button onclick="concluirModulo('escolhas')">
+          Concluir
+        </button>
+      </div>
+
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
 </body>
 </html>

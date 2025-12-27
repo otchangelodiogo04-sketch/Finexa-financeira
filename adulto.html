@@ -2,55 +2,56 @@
 <html lang="pt">
 <head>
   <meta charset="UTF-8">
-  <title>Finexa | Adultos</title>
+  <title>Finexa | Educação Financeira para Adultos</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body class="dashboard-body">
 
-<!-- SIDEBAR -->
 <aside class="sidebar">
   <img src="assets/logo.png" alt="Finexa">
-
   <nav>
-    <a>Início</a>
-    <a>Educação Financeira</a>
-    <a onclick="logout()" style="cursor:pointer;">Sair</a>
+    <a><i class="fa-solid fa-house"></i> Início</a>
+    <a><i class="fa-solid fa-book"></i> Conteúdos</a>
+    <a onclick="logout()" style="cursor:pointer;">
+      <i class="fa-solid fa-right-from-bracket"></i> Sair
+    </a>
   </nav>
 </aside>
 
-<!-- CONTEÚDO -->
 <main class="content">
 
   <div class="topbar">
     <h1>Educação Financeira para Adultos</h1>
-    <p>Aprenda a controlar, planejar e melhorar sua vida financeira</p>
+    <p>Base técnica para controle, planejamento e decisões financeiras conscientes</p>
   </div>
 
   <section class="cards">
 
     <div class="card">
-      <h3>Fundamentos do Dinheiro</h3>
-      <p>O básico que todos precisam saber</p>
-      <button onclick="mostrar('fundamentos')">Abrir</button>
+      <h3><i class="fa-solid fa-coins"></i> Fundamentos Financeiros</h3>
+      <p>Conceitos essenciais sobre dinheiro</p>
+      <button onclick="mostrar('fundamentos')">Abrir conteúdo</button>
     </div>
 
     <div class="card">
-      <h3>Controle de Gastos</h3>
-      <p>Como organizar entradas e saídas</p>
-      <button onclick="mostrar('gastos')">Abrir</button>
+      <h3><i class="fa-solid fa-chart-line"></i> Controle de Gastos</h3>
+      <p>Organização financeira pessoal</p>
+      <button onclick="mostrar('gastos')">Abrir conteúdo</button>
     </div>
 
     <div class="card">
-      <h3>Planejamento Financeiro</h3>
-      <p>Organize o presente e o futuro</p>
-      <button onclick="mostrar('planejamento')">Abrir</button>
+      <h3><i class="fa-solid fa-compass"></i> Planejamento Financeiro</h3>
+      <p>Metas, prazos e estratégia</p>
+      <button onclick="mostrar('planejamento')">Abrir conteúdo</button>
     </div>
 
     <div class="card">
-      <h3>Dívidas e Crédito</h3>
-      <p>Evite armadilhas financeiras</p>
-      <button onclick="mostrar('dividas')">Abrir</button>
+      <h3><i class="fa-solid fa-triangle-exclamation"></i> Dívidas e Crédito</h3>
+      <p>Riscos, juros e decisões responsáveis</p>
+      <button onclick="mostrar('dividas')">Abrir conteúdo</button>
     </div>
 
   </section>
@@ -67,37 +68,53 @@ function mostrar(tipo) {
 
   if (tipo === "fundamentos") {
     box.innerHTML = `
-      <h2>Fundamentos do Dinheiro</h2>
-      <p>Dinheiro é uma ferramenta para facilitar trocas e organizar a economia.</p>
-      <p>Educação financeira permite tomar decisões conscientes, evitando dívidas e desperdícios.</p>
+      <h2>Fundamentos Financeiros</h2>
+      <p>Educação financeira é a capacidade de compreender, planejar e controlar o uso do dinheiro.</p>
+      <ul>
+        <li>Diferença entre necessidade e desejo</li>
+        <li>Renda ativa e renda passiva</li>
+        <li>Valor do tempo e do dinheiro</li>
+      </ul>
+      <p>Sem fundamentos, qualquer decisão financeira se torna arriscada.</p>
     `;
   }
 
   if (tipo === "gastos") {
     box.innerHTML = `
       <h2>Controle de Gastos</h2>
-      <p>Registre tudo o que ganha e gasta.</p>
+      <p>O controle financeiro começa pelo registro.</p>
       <ul>
-        <li>Gastos fixos</li>
-        <li>Gastos variáveis</li>
-        <li>Gastos desnecessários</li>
+        <li>Gastos fixos (aluguel, contas)</li>
+        <li>Gastos variáveis (alimentação, lazer)</li>
+        <li>Gastos supérfluos</li>
       </ul>
+      <p>Quem não controla gastos perde previsibilidade financeira.</p>
     `;
   }
 
   if (tipo === "planejamento") {
     box.innerHTML = `
       <h2>Planejamento Financeiro</h2>
-      <p>Planejar é decidir como o dinheiro será usado.</p>
-      <p>Defina metas claras e acompanhe mensalmente.</p>
+      <p>Planejar é antecipar decisões futuras.</p>
+      <ol>
+        <li>Definir objetivos claros</li>
+        <li>Estabelecer prazos</li>
+        <li>Distribuir recursos de forma consciente</li>
+      </ol>
+      <p>Planejamento reduz riscos e aumenta estabilidade.</p>
     `;
   }
 
   if (tipo === "dividas") {
     box.innerHTML = `
       <h2>Dívidas e Crédito</h2>
-      <p>Crédito deve ser usado com cuidado.</p>
-      <p>Evite juros altos e compromissos além da sua renda.</p>
+      <p>Crédito não é extensão da renda.</p>
+      <ul>
+        <li>Entender juros e taxas</li>
+        <li>Evitar endividamento contínuo</li>
+        <li>Priorizar quitação de dívidas caras</li>
+      </ul>
+      <p>Uso incorreto do crédito compromete o futuro financeiro.</p>
     `;
   }
 

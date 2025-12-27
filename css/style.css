@@ -2,39 +2,42 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 body {
   background: #0e1117;
-  color: #e6edf3;
+  color: #fff;
 }
 
-/* ---------- LOGIN / REGISTER ---------- */
+a { color: #4fc3f7; text-decoration: none; }
+
+/* LOGIN / REGISTER */
 .auth-body {
   min-height: 100vh;
-  background: url("../assets/wallpaper.jpg") center/cover no-repeat;
+  background: url("../assets/wallpaper.jpg") no-repeat center/cover;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
 .auth-box {
-  width: 360px;
   background: rgba(14,17,23,0.95);
-  padding: 30px;
-  border-radius: 10px;
+  padding: 40px;
+  width: 360px;
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgba(0,0,0,.6);
 }
 
 .auth-box img {
-  width: 60px;
+  width: 70px;
   display: block;
-  margin: 0 auto 10px;
+  margin: 0 auto 15px;
 }
 
 .auth-box h2 {
   text-align: center;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .auth-box input,
@@ -49,42 +52,77 @@ body {
 
 .auth-box input,
 .auth-box select {
-  background: #161b22;
+  background: #1c1f26;
   color: #fff;
 }
 
 .auth-box button {
   background: #4fc3f7;
   color: #000;
-  font-weight: bold;
   cursor: pointer;
+  font-weight: bold;
 }
 
-/* ---------- DASHBOARD ---------- */
+/* DASHBOARD */
 .dashboard-body {
   display: flex;
-  min-height: 100vh;
 }
 
+/* SIDEBAR ICON ONLY */
 .sidebar {
-  width: 220px;
+  width: 70px;
   background: #0b0e14;
-  padding: 20px;
+  min-height: 100vh;
+  padding: 20px 10px;
+  transition: width .3s;
 }
 
-.sidebar img {
-  width: 40px;
+.sidebar:hover {
+  width: 220px;
+}
+
+.sidebar .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.sidebar .logo span {
+  display: none;
+  font-weight: bold;
+}
+
+.sidebar:hover .logo span {
+  display: inline;
 }
 
 .sidebar nav a {
-  display: block;
-  margin: 15px 0;
-  color: #9da5b4;
-  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 12px;
+  color: #bbb;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  transition: background .2s;
+}
+
+.sidebar nav a span {
+  display: none;
+}
+
+.sidebar:hover nav a span {
+  display: inline;
 }
 
 .sidebar nav a:hover {
+  background: #161b22;
   color: #4fc3f7;
+}
+
+.sidebar i {
+  font-size: 18px;
 }
 
 .content {
@@ -92,13 +130,9 @@ body {
   padding: 30px;
 }
 
-.topbar {
-  margin-bottom: 20px;
-}
-
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
   gap: 20px;
 }
 
@@ -114,11 +148,4 @@ body {
   background: #4fc3f7;
   border: none;
   cursor: pointer;
-}
-
-.aula-box {
-  margin-top: 30px;
-  background: #161b22;
-  padding: 20px;
-  border-radius: 10px;
 }
