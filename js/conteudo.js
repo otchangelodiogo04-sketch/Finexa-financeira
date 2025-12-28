@@ -7,6 +7,14 @@ const conteudos = {
     texto: `
       <p>Educação financeira é a base para decisões conscientes.</p>
       <p>Ela ajuda a evitar dívidas e a planejar o futuro.</p>
+      <br>
+      <br>
+      <h3>Pilares Fundamentais</h3>
+      <br>
+      <p><b>Orçamento e Fluxo de Caixa:</b> Entender receitas e despesas (reconhecer e registrar), garantindo equilíbrio e sobras para poupança e investimentos.</p>
+      <br>
+      <p><b>Orçamento e Fluxo de Caixa:</b> Entender receitas e despesas (reconhecer e registrar), garantindo equilíbrio e sobras para poupança e investimentos.</p>
+    `
     `
   },
 
