@@ -1,118 +1,165 @@
+/* ======================================================
+   FINEXA - CONTEÚDO EDUCACIONAL
+   Adultos & Pais
+   ====================================================== */
+
 const conteudos = {
 
-  /* ===== ADULTOS ===== */
+  /* ===========================
+     ADULTOS
+     =========================== */
+
   adulto_1: {
     titulo: "Fundamentos da Educação Financeira",
-    subtitulo: "Compreender antes de controlar",
+    subtitulo: "Antes de controlar o dinheiro, é preciso compreendê-lo",
     texto: `
-      <p>Educação financeira é a base para decisões conscientes.</p>
-      <p>Ela ajuda a evitar dívidas e a planejar o futuro.</p>
-      <br>
-      <br>
-      <h3>Pilares Fundamentais</h3>
-      <br>
-      <p><b>Orçamento e Fluxo de Caixa:</b> Entender receitas e despesas (reconhecer e registrar), garantindo equilíbrio e sobras para poupança e investimentos.</p>
-      <br>
-      <p><b>Orçamento e Fluxo de Caixa:</b> Entender receitas e despesas (reconhecer e registrar), garantindo equilíbrio e sobras para poupança e investimentos.</p>
-    `
+    <p>
+    Educação financeira é o conjunto de conhecimentos e práticas que permitem
+    tomar decisões conscientes sobre o uso do dinheiro ao longo da vida.
+    </p>
+
+    <p>
+    Não se trata apenas de poupar, mas de compreender
+    como o dinheiro afeta escolhas, comportamentos e objetivos.
+    </p>
+
+    <h3>Por que tantas pessoas enfrentam dificuldades financeiras?</h3>
+    <ul>
+      <li>Ausência de planejamento</li>
+      <li>Consumo impulsivo</li>
+      <li>Falta de controle dos gastos</li>
+      <li>Metas financeiras inexistentes</li>
+    </ul>
+
+    <p>
+    Ter educação financeira é viver com equilíbrio,
+    não necessariamente ganhar muito.
+    </p>
     `
   },
 
   adulto_2: {
     titulo: "Organização de Gastos",
-    subtitulo: "Controle total do dinheiro",
+    subtitulo: "Organizar é o primeiro passo para mudar",
     texto: `
-      <p>Organizar gastos é essencial para ter clareza financeira.</p>
-      <ul>
-        <li>Gastos fixos</li>
-        <li>Gastos variáveis</li>
-        <li>Gastos supérfluos</li>
-      </ul>
+    <p>
+    Organização financeira começa com a clareza
+    sobre para onde o dinheiro está indo.
+    </p>
+
+    <h3>Tipos de gastos</h3>
+    <ul>
+      <li><strong>Fixos:</strong> aluguel, transporte, contas</li>
+      <li><strong>Variáveis:</strong> alimentação, lazer</li>
+      <li><strong>Supérfluos:</strong> compras por impulso</li>
+    </ul>
+
+    <p>
+    Pequenos gastos diários somados
+    podem comprometer todo o orçamento.
+    </p>
     `
   },
 
   adulto_3: {
     titulo: "Planejamento Financeiro",
-    subtitulo: "Planejar é viver com tranquilidade",
+    subtitulo: "Planejar é proteger o presente e o futuro",
     texto: `
-      <p>Planejar ajuda a alcançar objetivos.</p>
-      <p>Curto, médio e longo prazo.</p>
+    <p>
+    Planejamento financeiro é definir objetivos claros
+    e organizar o dinheiro para alcançá-los.
+    </p>
+
+    <h3>Etapas do planejamento</h3>
+    <ol>
+      <li>Conhecer sua renda</li>
+      <li>Mapear gastos</li>
+      <li>Definir metas</li>
+      <li>Acompanhar resultados</li>
+    </ol>
+
+    <p>
+    Planejar reduz a ansiedade e aumenta o controle.
+    </p>
     `
   },
 
-  adulto_4: {
-    titulo: "Reserva de Emergência",
-    subtitulo: "Proteção financeira",
-    texto: `
-      <p>Reserva financeira evita dívidas em emergências.</p>
-    `
-  },
+  /* ===========================
+     PAIS
+     =========================== */
 
-  adulto_5: {
-    titulo: "Dívidas e Consumo",
-    subtitulo: "Consumir com consciência",
-    texto: `
-      <p>Evite compras impulsivas.</p>
-    `
-  },
-
-  adulto_6: {
-    titulo: "Mentalidade Financeira",
-    subtitulo: "O dinheiro começa na mente",
-    texto: `
-      <p>Mudar a mentalidade muda resultados.</p>
-    `
-  },
-
-  /* ===== PAIS ===== */
   pais_1: {
-    titulo: "O Papel dos Pais",
-    subtitulo: "Educação começa em casa",
+    titulo: "O Papel dos Pais na Educação Financeira",
+    subtitulo: "As crianças aprendem mais pelo exemplo",
     texto: `
-      <p>Os filhos aprendem pelo exemplo.</p>
+    <p>
+    O comportamento financeiro dos pais influencia diretamente
+    a forma como as crianças lidarão com dinheiro no futuro.
+    </p>
+
+    <h3>O que as crianças observam?</h3>
+    <ul>
+      <li>Como os pais gastam</li>
+      <li>Como lidam com dívidas</li>
+      <li>Como conversam sobre dinheiro</li>
+    </ul>
+
+    <p>
+    Educação financeira começa em casa.
+    </p>
     `
   },
 
   pais_2: {
-    titulo: "Ensinar a Poupar",
-    subtitulo: "Hábito desde cedo",
+    titulo: "Ensinar Crianças a Poupar",
+    subtitulo: "Poupar é aprender a esperar",
     texto: `
-      <p>Poupar ensina paciência.</p>
+    <p>
+    Poupar não é privação,
+    mas aprender a adiar recompensas.
+    </p>
+
+    <h3>Benefícios</h3>
+    <ul>
+      <li>Autocontrole</li>
+      <li>Responsabilidade</li>
+      <li>Consciência financeira</li>
+    </ul>
+
+    <p>
+    Use exemplos práticos para tornar o aprendizado real.
+    </p>
     `
   },
 
   pais_3: {
     titulo: "Mesada Consciente",
-    subtitulo: "Ferramenta educativa",
+    subtitulo: "Educar, não controlar",
     texto: `
-      <p>Mesada ensina escolhas.</p>
-    `
-  },
+    <p>
+    A mesada é uma ferramenta educativa
+    quando usada com orientação.
+    </p>
 
-  pais_4: {
-    titulo: "Diálogo Financeiro",
-    subtitulo: "Conversar é educar",
-    texto: `
-      <p>Falar sobre dinheiro reduz medos.</p>
-    `
-  },
+    <h3>Boas práticas</h3>
+    <ul>
+      <li>Valor fixo</li>
+      <li>Periodicidade definida</li>
+      <li>Liberdade com responsabilidade</li>
+    </ul>
 
-  pais_5: {
-    titulo: "Planejamento Familiar",
-    subtitulo: "Organização traz paz",
-    texto: `
-      <p>Planejar juntos fortalece a família.</p>
-    `
-  },
-
-  pais_6: {
-    titulo: "Preparar para o Futuro",
-    subtitulo: "Educação é herança",
-    texto: `
-      <p>Ensinar hoje garante autonomia amanhã.</p>
+    <p>
+    O objetivo é ensinar escolhas,
+    não evitar erros.
+    </p>
     `
   }
+
 };
+
+/* ======================================================
+   CARREGAR CONTEÚDO
+   ====================================================== */
 
 const params = new URLSearchParams(window.location.search);
 const id = params.get("id");
