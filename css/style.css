@@ -35,12 +35,12 @@ body {
 }
 
 .logo-box img {
-  width: 42px;
+  width: 80px;
 }
 
 .logo-text {
   margin-top: 8px;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
   color: #38bdf8;
 }
@@ -328,5 +328,110 @@ body {
 
 .shake {
   animation: shake 0.4s ease;
+}
+.exit-game {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #ef4444;
+  color: white;
+  border: none;
+  font-size: 18px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1000;
+}
+/* =========================
+   RESPONSIVO - MOBILE
+   ========================= */
+@media screen and (min-width: 200px) and (max-width: 780px){
+
+  body.dashboard {
+    display: block;
+  }
+  .logo-box img {
+  width: 45px;
+}
+
+.logo-text {
+  margin-top: 8px;
+  font-size: 25px;
+  font-weight: bold;
+  color: #38bdf8;
+}
+
+  /* SIDEBAR vira topo */
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 16px;
+  }
+
+  .sidebar nav {
+    display: block;
+  }
+
+  nav a {
+    padding: 20px;
+    text-aling: left;
+    font-size: 20px;
+  }
+
+  /* Conteúdo ocupa tudo */
+  .main,
+  .content {
+    margin-left: 0;
+    padding: 16px;
+  }
+
+  /* Header ajustado */
+  .header h1 {
+    font-size: 1.3rem;
+  }
+
+  .header p {
+    font-size: 0.95rem;
+  }
+
+  /* Cards em coluna */
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .card {
+    padding: 16px;
+  }
+
+  /* Login & Register */
+  .auth-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+  }
+
+  .auth-box {
+    width: 100%;
+    max-width: 360px;
+  }
+
+  /* Jogo criança */
+  .game-container {
+    width: 100%;
+    padding: 16px;
+  }
+
+  .question-box {
+    padding: 16px;
+  }
 }
 
