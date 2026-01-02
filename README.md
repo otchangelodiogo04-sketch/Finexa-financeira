@@ -1,7 +1,7 @@
 # Finexa
 
 Finexa é uma plataforma de educação financeira simples, moderna e escalável.
-
+![Preview do Portfólio](baixados (1).png)
 ## Tecnologias
 - HTML
 - CSS
@@ -9,3 +9,5 @@ Finexa é uma plataforma de educação financeira simples, moderna e escalável.
 
 ## Status
 🚧 Em desenvolvimento
+
+link: https://finexa-zeta.vercel.app
