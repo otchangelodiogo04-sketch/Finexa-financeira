@@ -197,7 +197,7 @@ body {
 
 .auth-page {
   min-height: 100vh;
-  background: url("../assets/wallpaper.jpg") center/cover no-repeat;
+  background: url("../assets/cash-flow-concept-wallpaper-with-copy-space-job-background-flat-design-vibrant-colors-seam_1288054-14994.avif") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -432,6 +432,12 @@ body {
 
   .question-box {
     padding: 16px;
+  }
+  .space-x-4{
+    padding: 12px;
+  }
+  .bg-indigo-600{
+    padding: 12px;
   }
 }
 

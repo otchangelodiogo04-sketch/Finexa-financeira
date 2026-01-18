@@ -1,9 +1,16 @@
-function openModal(title, content) {
-  document.getElementById("modalTitle").innerHTML = title;
-  document.getElementById("modalBody").innerHTML = content;
-  document.getElementById("contentModal").classList.remove("hidden");
+const toggleTheme = document.getElementById("themeToggle");
+
+function aplicarTema() {
+  const theme = localStorage.getItem("theme") || "dark";
+  document.body.className = theme;
 }
 
-function closeModal() {
-  document.getElementById("contentModal").classList.add("hidden");
+if (toggleTheme) {
+  toggleTheme.addEventListener("click", () => {
+    const novoTema = document.body.classList.contains("dark") ? "light" : "dark";
+    localStorage.setItem("theme", novoTema);
+    aplicarTema();
+  });
 }
+
+aplicarTema();

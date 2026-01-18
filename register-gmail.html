@@ -9,8 +9,8 @@
   <meta name="publisher" content="Finexa - Educação Financeira">
   <meta name="author" content="Otchângelo Diogo">
   <!-- Canonical -->
-  <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
   <link rel="canonical" href="https://finexa-zeta.vercel.app/" />
+  <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
 
   <!-- Robots -->
   <meta name="robots" content="index, follow">
@@ -24,10 +24,6 @@
 <div class="auth-box">
   <h2>Criar Conta</h2>
 <form onsubmit="registerUser(event)">
-  <input id="full_name" placeholder="Nome completo" required>
-  <input id="email" type="email" placeholder="Email" required>
-  <input id="password" type="password" placeholder="Senha" required>
-
   <select id="profile" required>
     <option value="">Escolha o perfil</option>
     <option value="crianca">Criança</option>
@@ -37,18 +33,7 @@
 
   <button type="submit">Cadastrar</button>
 </form>
-<br>
-<div id="googleBtn"></div>
 
-<script src="https://accounts.google.com/gsi/client" async defer></script>
-<script src="js/google-auth.js"></script>
-
-
-  <p>
-    Já tens conta?
-    <a href="login.html">Entrar</a>
-  </p>
-</div>
 
 <script src="js/auth.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jwt-decode/build/jwt-decode.min.js"></script>
