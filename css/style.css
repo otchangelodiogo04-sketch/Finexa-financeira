@@ -351,6 +351,9 @@ body {
   body.dashboard {
     display: block;
   }
+  body {
+    font-size: 10px;
+}
   .logo-box img {
   width: 45px;
 }
